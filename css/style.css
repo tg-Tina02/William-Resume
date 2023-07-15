@@ -17,13 +17,6 @@ body{
     font-size: 24px;
     margin-left: 9px;
 }
-/* .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-} */
 .contact .material-symbols-outlined{
     vertical-align:middle;
     font-size: 100px;
@@ -34,7 +27,6 @@ a{
     color: inherit;
 }
 img{
-    /* display: block; */
     vertical-align: middle;
 }
 h1{
@@ -72,8 +64,12 @@ nav ul{
     justify-content: space-between;
     padding-top: 40px;
 }
+nav a{
+    transition: 0.5s;
+}
 nav a:hover{
     opacity: 0.8;
+    color: #00FFA3;
 }
 
 
@@ -94,15 +90,17 @@ header .container{
     width: fit-content;
     background: #fff;
     color: #000;
+    border: 2px solid currentColor;
     padding: 12px 24px;
     border-radius: 32px;
     margin-left: auto;
 
-    transition: all 0.5s;
+    transition: 0.5s;
 }
 .header-btn:hover{
-    color: #00FFA3;
-    box-shadow: inset 2px 2px 3px 3px #00ffa28b;
+    color:#00FFA3;
+    border: 2px solid currentColor;
+    background: none;
 }
 
 
@@ -141,17 +139,17 @@ header .container{
     justify-content: flex-start;
     align-content: center;
 }
-.about .card{
+.card{
     border: 1px solid #E3E3E3;
     padding: 16px;
     margin: 12px;
     max-width: 306px;
 }
-.about .card-title{
+.card-title{
     font-size: 20px;
     line-height: 30px;
 }
-.about .card p{
+.card p{
     font: inherit;
     margin-top: 4px;
 }
@@ -174,11 +172,44 @@ header .container{
     justify-content: space-between;
     align-items: center;
 }
-.contact .icon-group{
+.icon-group{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    gap: 20px;
 }
+.icon-group a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.icon-group li{
+    width: 162px;
+    height: 162px;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
 
+    transition: 0.5s;
+}
+/* discord */
+.icon-group li:first-of-type{
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/discord.png?raw=true");
+    background-position: center;
+}
+/* ig */
+.icon-group li:nth-of-type(2){
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/instagram.png?raw=true");
+    background-position: left -4px top -4px;
+}
+/* message */
+.icon-group li:nth-of-type(3){
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/message.png?raw=true");
+    background-position: left -4px top -4px;
+}
+.icon-group li:hover{
+    box-shadow: 0px 0px 16px 3px #9094FFE5;
+}
 
 /* projects */
 .projects{
@@ -207,7 +238,7 @@ header .container{
 .projects p{
     font: inherit;
 }
-.projects .text a{
+.projects .btn{
     display: inline-block;
     width: fit-content;
     padding: 12px 24px;
@@ -215,6 +246,20 @@ header .container{
     background: #000;
     color: #fff;
     border-radius: 32px;
+    border: 2px solid currentColor;
+    transition: 0.5s;
+}
+.projects .btn:hover{
+    background: none;
+    color: #000;
+    border: 2px solid currentColor;
+}
+.projects a:not(.btn){
+    filter: brightness(0.8);
+    transition: 0.5s;
+}
+.projects a:hover{
+    filter: brightness(1);
 }
 
 
