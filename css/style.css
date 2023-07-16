@@ -140,6 +140,7 @@ header .container{
 }
 .card{
     border: 1px solid #E3E3E3;
+    box-shadow: 4px 4px 4px 0px #00000014;
     padding: 16px;
     margin: 12px;
     max-width: 306px;
