@@ -28,21 +28,16 @@ a{
 img{
     vertical-align: middle;
 }
-h1{
-    font-size: 128px;
-    color: #00FFA3;
-    text-align: right;
-}
-h2{
-    font-size: 64px;
-    color: inherit;
-}
 p{
     font-size: 24px;
 }
 .container{
     max-width: 1296px;
     margin: 0 auto;
+}
+.type-h2{
+    font-size: 64px;
+    color: inherit;
 }
 
 
@@ -79,6 +74,11 @@ header .container{
     align-items: center;
     gap: 24px;
     padding: 72px 0;
+}
+.header-title{
+    font-size: 128px;
+    color: #00FFA3;
+    text-align: right;
 }
 .header-btn{
     display: block;
